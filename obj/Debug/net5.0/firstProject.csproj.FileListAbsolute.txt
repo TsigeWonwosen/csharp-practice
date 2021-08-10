@@ -1,0 +1,16 @@
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject.deps.json
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject.runtimeconfig.json
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject.runtimeconfig.dev.json
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject.dll
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/ref/firstProject.dll
+/home/wonde/Desktop/Csharp/firstProject/bin/Debug/net5.0/firstProject.pdb
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.csproj.AssemblyReference.cache
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.AssemblyInfoInputs.cache
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.AssemblyInfo.cs
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.csproj.CoreCompileInputs.cache
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.dll
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/ref/firstProject.dll
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.pdb
+/home/wonde/Desktop/Csharp/firstProject/obj/Debug/net5.0/firstProject.genruntimeconfig.cache
