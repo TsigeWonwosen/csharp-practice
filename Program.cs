@@ -1,4 +1,5 @@
 ﻿using System;
+using taskManager;
 
 namespace firstProject
 {
@@ -6,39 +7,24 @@ namespace firstProject
     {
         static void Main(string[] args)
         {
-            string[] tasks = {"study C#","test 1","test 2"};
-            Console.WriteLine("Task Manger :  ");
-            
-            foreach(string task in tasks) Console.WriteLine(task);
+            TaskManager test = new TaskManager();
 
-            string taskInput ="";
-
-Console.ForegroundColor = ConsoleColor.Green;
-        
-            while(taskInput != "q" && taskInput != "exit"){
-                Array.Resize(ref tasks, tasks.Length + 1);
-            
-            Console.WriteLine("Enter task:");
-             Console.WriteLine("****");
-
-            taskInput = Console.ReadLine();
-
-            if((taskInput != "exit" && taskInput != "q" && taskInput != "")){
-
-            tasks[tasks.Length - 1] =  taskInput;
+            int[] inventory = { 200, 450, 700, 175, 250 };
+            int sum = 0;
+            int bin = 0;
+            foreach (int items in inventory)
+            {
+                sum += items;
+                bin++;
+                Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
             }
-            }
-            //foreach(string task in tasks) Console.WriteLine(task);
+            Console.WriteLine($"We have {sum} items in inventory.");
+            test.stuff();
+            Console.WriteLine(Reverse("Wondwosen"));
 
-        foreach(string task in tasks) {
-            Console.Write(task);
-            Console.Write("\t");
-        }
-         Console.WriteLine();
-        Console.WriteLine(tasks.Length);
         }
 
-         private static string Reverse(string message)
+        private static string Reverse(string message)
         {
             char[] letters = message.ToCharArray();
             Array.Reverse(letters);
