@@ -1,42 +1,53 @@
 using System;
 
-namespace taskManager {
-    public class TaskManager {
-        public void stuff() {
- 
-           string[] tasks = {"study C#","test 1","test 2"};
-            Console.WriteLine("Task Manger :  ");
-            
-            foreach(string task in tasks) Console.WriteLine(task);
+namespace taskManager
+{
+    public class TaskManager
+    {
+        public void stuff()
+        {
 
-            string taskInput ="";
+            string[] tasks = { "study C#", "test 1", "test 2" };
+            Console.WriteLine("Task Manger :  ");
+
+            foreach (string task in tasks) Console.WriteLine(task);
+
+            string taskInput = "";
 
             Console.ForegroundColor = ConsoleColor.Green;
-        
-            while(taskInput != "q" && taskInput != "exit"){
+
+            while (taskInput != "q" && taskInput != "exit")
+            {
                 Array.Resize(ref tasks, tasks.Length + 1);
-            
-            Console.WriteLine("Enter task:");
-             Console.WriteLine("****");
 
-            taskInput = Console.ReadLine();
+                Console.WriteLine("Enter task:");
+                Console.WriteLine("****");
 
-            if((taskInput != "exit" && taskInput != "q" && taskInput != "")){
+                taskInput = Console.ReadLine();
 
-            tasks[tasks.Length - 1] =  taskInput;
-            }
+                if ((taskInput != "exit" && taskInput != "q" && taskInput != ""))
+                {
+
+                    tasks[tasks.Length - 1] = taskInput;
+                }
             }
             //foreach(string task in tasks) Console.WriteLine(task);
 
-        foreach(string task in tasks) {
-            Console.Write(task);
-            Console.Write("\t");
+            foreach (string task in tasks)
+            {
+                Console.Write(task);
+                Console.Write("\t");
+            }
+            Console.WriteLine();
+            Console.WriteLine(tasks.Length);
         }
-         Console.WriteLine();
-        Console.WriteLine(tasks.Length);
+        public string Reverse(string message)
+        {
+            char[] letters = message.ToCharArray();
+            Array.Reverse(letters);
+            return new string(letters);
         }
-        }
+    }
 
-        
-    
+
 }

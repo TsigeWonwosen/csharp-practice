@@ -1,5 +1,7 @@
 ﻿using System;
 using taskManager;
+using heroMonster;
+using dataTypes;
 
 namespace firstProject
 {
@@ -7,6 +9,15 @@ namespace firstProject
     {
         static void Main(string[] args)
         {
+            HeroMonster result = new HeroMonster();
+            DataTypes data = new DataTypes();
+
+            data.dataTypes();
+            Console.WriteLine(result.winner());
+
+            foreach (string b in args)
+                Console.WriteLine(b + "   ");
+
             TaskManager test = new TaskManager();
 
             int[] inventory = { 200, 450, 700, 175, 250 };
@@ -20,15 +31,10 @@ namespace firstProject
             }
             Console.WriteLine($"We have {sum} items in inventory.");
             test.stuff();
-            Console.WriteLine(Reverse("Wondwosen"));
+            Console.WriteLine(test.Reverse("Wondwosen"));
 
         }
 
-        private static string Reverse(string message)
-        {
-            char[] letters = message.ToCharArray();
-            Array.Reverse(letters);
-            return new string(letters);
-        }
+
     }
 }
