@@ -11,9 +11,15 @@ namespace firstProject
         {
             HeroMonster result = new HeroMonster();
             DataTypes data = new DataTypes();
+            TryParse parse = new TryParse();
+            ArrayMethods array = new ArrayMethods();
 
-            data.dataTypes();
-            Console.WriteLine(result.winner());
+            array.arrayMethods();
+
+            // parse.tryparse();
+
+            // data.dataTypes();
+            //     Console.WriteLine(result.winner());
 
             foreach (string b in args)
                 Console.WriteLine(b + "   ");
@@ -27,11 +33,11 @@ namespace firstProject
             {
                 sum += items;
                 bin++;
-                Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+                // Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
             }
-            Console.WriteLine($"We have {sum} items in inventory.");
+            // Console.WriteLine($"We have {sum} items in inventory.");
             test.stuff();
-            Console.WriteLine(test.Reverse("Wondwosen"));
+            // Console.WriteLine(test.Reverse("Wondwosen"));
 
         }
 
