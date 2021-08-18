@@ -1,6 +1,6 @@
 using System;
 
-namespace taskManager
+namespace firstProject.task
 {
     public class ArrayMethods
     {
