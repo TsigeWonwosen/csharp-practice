@@ -83,6 +83,61 @@ namespace firstProject
             foreach (var stud in students)
                 Console.WriteLine(stud.Id.ToString().PadRight(5) + stud.Name.ToString().PadRight(5) + stud.Age.ToString().PadLeft(9));
 
+
+            Console.WriteLine("Interface ---> \n");
+
+            IFile file1 = new FileInfo();
+            FileInfo file2 = new FileInfo();
+
+            file1.ReadFile();
+            file1.WriteFile("content");
+
+            file2.ReadFile();
+            file2.WriteFile("Wonde");
+
+            int x = 5;
+
+            switch (x)
+            {
+                case 1:
+                    Console.WriteLine("x = 1");
+                    break;
+                case 2:
+                    Console.WriteLine("x = 2");
+                    break;
+                case 4:
+
+                case 5:
+                    Console.WriteLine("x = 4 or x = 5");
+                    break;
+                default:
+                    Console.WriteLine("x > 5");
+                    break;
+            }
+
+            Console.WriteLine("Generic Class ...");
+
+            DataStore<string> student = new DataStore<string>();
+            DataStore<int> id = new DataStore<int>();
+            student.AddOrUpdate(0, "Wonde");
+            student.AddOrUpdate(1, "Abel");
+            student.AddOrUpdate(2, "Chuchu");
+
+            id.AddOrUpdate(0, 100);
+            id.AddOrUpdate(1, 200);
+            id.AddOrUpdate(2, 300);
+            id.AddOrUpdate(3, 400);
+
+
+            Console.WriteLine(student.GetData(2));
+            Console.WriteLine(student.GetData(0));
+            Console.WriteLine(student.GetData(1));
+
+            Console.WriteLine(id.GetData(2));
+            Console.WriteLine(id.GetData(0));
+            Console.WriteLine(id.GetData(1));
+
+
         }
 
 
