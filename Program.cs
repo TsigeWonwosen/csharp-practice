@@ -77,11 +77,20 @@ namespace firstProject
                         new Student() { StudentID = 5, StudentName = "Ron" , age = 21 }
                     };
 
+            var newStudent = new Student { StudentID = 6, StudentName = "Tesema", age = 30 };
+            studentList.Add(newStudent);
+
             var students = from s in studentList
                            select new { Id = s.StudentID, Name = s.StudentName, Age = s.age };
+
             Console.WriteLine("Id".ToString().PadRight(5) + "Name".ToString().PadRight(5) + "Age".ToString().PadLeft(10));
             foreach (var stud in students)
                 Console.WriteLine(stud.Id.ToString().PadRight(5) + stud.Name.ToString().PadRight(5) + stud.Age.ToString().PadLeft(9));
+
+
+
+            foreach (Student stud in studentList)
+                Console.WriteLine(stud.StudentID.ToString().PadRight(5) + stud.StudentName.ToString().PadRight(10) + stud.age.ToString().PadLeft(9));
 
 
             Console.WriteLine("Interface ---> \n");
@@ -136,6 +145,10 @@ namespace firstProject
             Console.WriteLine(id.GetData(2));
             Console.WriteLine(id.GetData(0));
             Console.WriteLine(id.GetData(1));
+
+            Console.WriteLine("ArrayLink ...");
+
+            ArrayListClass list = new ArrayListClass();
 
 
         }
