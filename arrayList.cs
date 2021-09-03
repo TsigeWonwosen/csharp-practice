@@ -43,6 +43,7 @@ namespace firstProject
 
             for (int i = 0; i < arrayList.Count; i++)
                 System.Console.Write(i + " ");
+
             System.Console.WriteLine();
             arrayList.Remove(null); //Removes first occurance of null
             arrayList.RemoveAt(4); //Removes element at index 4

@@ -32,6 +32,64 @@ namespace firstProject
             // IndexOfSubstring indexOf = new IndexOfSubstring();
             DateAndTime dt = new DateAndTime();
 
+
+            List<int> number = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            Func<int, bool> oddCheck = x => x % 2 != 0;
+            Func<int[], int> sumOfArray = x =>
+            {
+                int res = 0;
+                foreach (var item in x)
+                {
+                    res += item;
+                }
+                return res;
+            };
+
+            foreach (var item in number)
+            {
+                Console.WriteLine($"{item} :  {oddCheck(item)} ");
+            }
+
+            Console.WriteLine();
+            var OddNumbers = number.Where(oddCheck).ToList();
+
+            OddNumbers.ForEach(a =>
+            {
+
+                Console.WriteLine($"{a} ==> {oddCheck(a)}");
+
+            });
+            Console.WriteLine("Array Sum ----> ");
+            int[] ArrayList = { 10, 20, 30, 40, 50, 300, 2, 212, 33, 22, 61 };
+            Console.WriteLine(sumOfArray(ArrayList));
+
+            Console.WriteLine("Array Sum --- LINQ ");
+
+            int LinqSum = ArrayList.Sum(a => a);
+            int LinqMax = ArrayList.Max();
+            int LinqMin = ArrayList.Min();
+
+            Console.WriteLine("LINQ Sum: " + LinqSum + "Max :" + LinqMax + " Min : " + LinqMin);
+            Console.WriteLine(" ***** ");
+
+            var NumberLINQ = from i in ArrayList
+                             where i > 20
+                             orderby i descending
+                             select i;
+            // NumberLINQ = NumberLINQ.Where(num => num > 30);
+            foreach (var item in NumberLINQ)
+            {
+                Console.Write($" {item}");
+
+            }
+            System.Console.WriteLine();
+
+
+
+
+
+
             // array.arrayMethods();
 
             // parse.tryparse();
@@ -45,13 +103,13 @@ namespace firstProject
             // TaskManager test = new TaskManager();
 
             WeekDays myVar = WeekDays.Monday;
-            Console.WriteLine(myVar); // Monday
-            Console.WriteLine(WeekDays.Tuesday); // Tuesday
-            Console.WriteLine(WeekDays.Wednesday); // Wednesday
-            Console.WriteLine(WeekDays.Thursday); // Thursday
-            Console.WriteLine(WeekDays.Friday); // Friday
-            Console.WriteLine(WeekDays.Saturday); // Saturday
-            Console.WriteLine(WeekDays.Sunday); // Sunday
+            // Console.WriteLine(myVar); // Monday
+            // Console.WriteLine(WeekDays.Tuesday); // Tuesday
+            // Console.WriteLine(WeekDays.Wednesday); // Wednesday
+            // Console.WriteLine(WeekDays.Thursday); // Thursday
+            // Console.WriteLine(WeekDays.Friday); // Friday
+            // Console.WriteLine(WeekDays.Saturday); // Saturday
+            // Console.WriteLine(WeekDays.Sunday); // Sunday
 
             int[] inventory = { 200, 450, 700, 175, 250 };
             int sum = 0;
@@ -83,7 +141,7 @@ namespace firstProject
             var students = from s in studentList
                            select new { Id = s.StudentID, Name = s.StudentName, Age = s.age };
 
-            Console.WriteLine("Id".ToString().PadRight(5) + "Name".ToString().PadRight(5) + "Age".ToString().PadLeft(10));
+            // Console.WriteLine("Id".ToString().PadRight(5) + "Name".ToString().PadRight(5) + "Age".ToString().PadLeft(10));
             foreach (var stud in students)
                 Console.WriteLine(stud.Id.ToString().PadRight(5) + stud.Name.ToString().PadRight(5) + stud.Age.ToString().PadLeft(9));
 
@@ -138,17 +196,21 @@ namespace firstProject
             id.AddOrUpdate(3, 400);
 
 
-            Console.WriteLine(student.GetData(2));
-            Console.WriteLine(student.GetData(0));
-            Console.WriteLine(student.GetData(1));
+            // Console.WriteLine(student.GetData(2));
+            // Console.WriteLine(student.GetData(0));
+            // Console.WriteLine(student.GetData(1));
 
-            Console.WriteLine(id.GetData(2));
-            Console.WriteLine(id.GetData(0));
-            Console.WriteLine(id.GetData(1));
+            // Console.WriteLine(id.GetData(2));
+            // Console.WriteLine(id.GetData(0));
+            // Console.WriteLine(id.GetData(1));
 
-            Console.WriteLine("ArrayLink ...");
+            // Console.WriteLine("ArrayLink ...");
 
             ArrayListClass list = new ArrayListClass();
+
+            DeltaTime dTime = new DeltaTime();
+
+            Console.WriteLine(dTime.deltaTime());
 
 
         }
